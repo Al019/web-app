@@ -1,3 +1,4 @@
+import ProfileForm from "@/components/forms/profile-form"
 import Heading from "@/components/heading"
 import { columns } from "@/components/table/columns"
 import DataTable from "@/components/table/data-table"
@@ -26,9 +27,15 @@ const data = [
 
 const Dashboard = () => {
   return (
-    <div className="space-y-8">
-      <Heading title="Data Table" />
-      <DataTable columns={columns} data={data} />
+    <div className="space-y-20">
+      <div className="space-y-8">
+        <Heading title="Data Table" />
+        <DataTable columns={columns} data={data} />
+      </div>
+      <div className="space-y-8">
+        <Heading title="Form Validation" />
+        <ProfileForm />
+      </div>
     </div>
   )
 }
