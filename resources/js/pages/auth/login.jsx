@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import AuthLayout from "@/layouts/auth-layout"
 import { Link, useForm } from "@inertiajs/react"
-import { LoaderCircle } from "lucide-react"
+import { Loader } from "lucide-react"
 
 const Login = ({ status, canResetPassword }) => {
   const { data, setData, post, processing, errors, clearErrors } = useForm({
@@ -54,7 +54,7 @@ const Login = ({ status, canResetPassword }) => {
           )}
         </div>
         <Button disabled={processing}>
-          {processing && <LoaderCircle className="animate-spin" />}
+          {processing && <Loader className="animate-spin" />}
           Log in
         </Button>
       </div>

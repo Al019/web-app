@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import AuthLayout from "@/layouts/auth-layout"
 import { useForm } from "@inertiajs/react"
-import { LoaderCircle } from "lucide-react"
+import { Loader } from "lucide-react"
 
 const ConfirmPassword = () => {
   const { data, setData, post, processing, errors, clearErrors } = useForm({
@@ -27,7 +27,7 @@ const ConfirmPassword = () => {
         </div>
       </div>
       <Button disabled={processing}>
-        {processing && <LoaderCircle className="animate-spin" />}
+        {processing && <Loader className="animate-spin" />}
         Confirm password
       </Button>
     </form>

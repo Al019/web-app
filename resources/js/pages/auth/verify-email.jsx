@@ -2,7 +2,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import AuthLayout from "@/layouts/auth-layout";
 import { Link, useForm } from "@inertiajs/react";
-import { LoaderCircle } from "lucide-react";
+import { Loader } from "lucide-react";
 
 const VerifyEmail = ({ status }) => {
   const { post, processing } = useForm({})
@@ -24,7 +24,7 @@ const VerifyEmail = ({ status }) => {
           </Alert>
         )}
         <Button variant="secondary" disabled={processing}>
-          {processing && <LoaderCircle className="animate-spin" />}
+          {processing && <Loader className="animate-spin" />}
           Resend verification email
         </Button>
       </div>

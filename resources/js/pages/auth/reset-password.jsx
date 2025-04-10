@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import AuthLayout from "@/layouts/auth-layout"
 import { useForm } from "@inertiajs/react"
-import { LoaderCircle } from "lucide-react"
+import { Loader } from "lucide-react"
 
 const ResetPassword = ({ token, email }) => {
   const { data, setData, post, processing, errors, clearErrors } = useForm({
@@ -34,7 +34,7 @@ const ResetPassword = ({ token, email }) => {
           <InputError message={errors.password_confirmation} />
         </div>
         <Button disabled={processing}>
-          {processing && <LoaderCircle className="animate-spin" />}
+          {processing && <Loader className="animate-spin" />}
           Reset password
         </Button>
       </div>
