@@ -1,6 +1,6 @@
 const InputError = ({ message }) => {
   return message ? (
-    <p className="text-sm text-destructive">
+    <p className="text-[0.8rem] font-medium text-destructive">
       {message}
     </p>
   ) : null;
